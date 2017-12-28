@@ -75,7 +75,6 @@
 		DC06EED01EFC40290002CB40 /* YapDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC1E7D031D80C901000721B8 /* YapDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC1E7D101D80CC26000721B8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1E7D0F1D80CC26000721B8 /* libsqlite3.tbd */; };
 		DC302B0A1BE94F99009F8C4D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65216F1BCED5D100188E23 /* libsqlite3.tbd */; };
-		DC302B0B1BE94FDF009F8C4D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC302B081BE94F31009F8C4D /* libsqlite3.tbd */; };
 		DC302B471BE98DAC009F8C4D /* YapMutationStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DC302B451BE98DAC009F8C4D /* YapMutationStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC302B481BE98DAC009F8C4D /* YapMutationStack.h in Headers */ = {isa = PBXBuildFile; fileRef = DC302B451BE98DAC009F8C4D /* YapMutationStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC302B491BE98DAC009F8C4D /* YapMutationStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DC302B461BE98DAC009F8C4D /* YapMutationStack.m */; };
@@ -1404,7 +1403,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC302B0B1BE94FDF009F8C4D /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3960,12 +3958,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = Framework/iOS/module.modulemap;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					dynamic_lookup,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deusty.YapDatabase;
 				PRODUCT_NAME = YapDatabase;
+				REEXPORTED_FRAMEWORK_NAMES = CocoaLumberjack;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3991,12 +3986,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = Framework/iOS/module.modulemap;
-				OTHER_LDFLAGS = (
-					"-undefined",
-					dynamic_lookup,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deusty.YapDatabase;
 				PRODUCT_NAME = YapDatabase;
+				REEXPORTED_FRAMEWORK_NAMES = CocoaLumberjack;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
